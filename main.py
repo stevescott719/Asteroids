@@ -1,6 +1,8 @@
 import pygame
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state
+from circleshape import CircleShape
+from player import Player
 
 def main():
     
@@ -23,7 +25,12 @@ def main():
 
         screen.fill("black")
 
+        player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
+
+        player.draw(screen)
+
         pygame.display.flip()
+
         dt = pygame.time.Clock().tick(60) / 1000
 
         #print(f"Delta time: {dt:.4f} seconds")
