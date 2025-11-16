@@ -12,3 +12,4 @@ wheels/
 
 # Pygame-specific files
 game_state.jsonl
+game_events.jsonl
